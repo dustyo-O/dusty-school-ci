@@ -1,3 +1,6 @@
+import { Widget } from '../../lib/widget';
+import { EarthquakePanel } from '../earthquake-panel/earthquake-panel';
+
 class EarthquakeList extends Widget {
   static _block = 'earthquake-list';
 
@@ -38,3 +41,5 @@ class EarthquakeList extends Widget {
     }
   }
 }
+
+export { EarthquakeList };

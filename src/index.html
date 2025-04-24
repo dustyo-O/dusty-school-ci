@@ -4,25 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./src/blocks/earthquake-panel/earthquake-panel.css" />
-  <link rel="stylesheet" href="./src/blocks/leaflet/leaflet.css" />
 </head>
 <body>
   <div class="root"></div>
   <script src="https://kit.fontawesome.com/80d0029610.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-  <script src="./src/lib/widget.js"></script>
-
-  <script src="./src/blocks/earthquake-list/earthquake-list.js"></script>
-  <script src="./src/blocks/earthquake-panel/earthquake-panel.js"></script>
-  <script src="./src/blocks/leaflet/leaflet.js"></script>
-
-  <script>
-    const root = document.querySelector('.root');
-
-    const earthquakeList = new EarthquakeList(root);
-    const leaflet = new Leaflet(root, { coordinatesOrigin: earthquakeList.widget });
-  </script>
 </body>
 </html>

@@ -83,3 +83,5 @@ class Widget {
     Widget.triggerEvent.call(document.body, eventName, data);
   }
 }
+
+export { Widget };

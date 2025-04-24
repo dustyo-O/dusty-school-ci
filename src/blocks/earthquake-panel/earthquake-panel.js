@@ -1,3 +1,7 @@
+import { Widget } from '../../lib/widget';
+
+import './earthquake-panel.css';
+
 class EarthquakePanel extends Widget {
   static _block = 'earthquake-panel';
   static _levelIcons = {
@@ -63,3 +67,5 @@ class EarthquakePanel extends Widget {
     this._trigger('framework:earthquake-panel:select', { ...this.coordinates });
   }
 }
+
+export { EarthquakePanel };

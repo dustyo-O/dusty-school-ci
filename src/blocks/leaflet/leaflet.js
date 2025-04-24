@@ -1,3 +1,9 @@
+import { Widget } from '../../lib/widget';
+import { map, tileLayer, marker } from "leaflet";
+
+import '../../../node_modules/leaflet/dist/leaflet.css';
+import './leaflet.css';
+
 class Leaflet extends Widget {
   static _block = 'leaflet';
 
@@ -20,15 +26,15 @@ class Leaflet extends Widget {
   }
 
   getMapImage(latitude, longitude, zoom = 14) {
-    this._map = this._map ?? L.map(this.widget);
+    this._map = this._map ?? map(this.widget);
 
-    const map = this._map.setView([latitude, longitude], zoom);
+    const mapEntity = this._map.setView([latitude, longitude], zoom);
     // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+    }).addTo(mapEntity);
     // Add a marker
-    L.marker([latitude, longitude]).addTo(map);
+    marker([latitude, longitude]).addTo(mapEntity);
   }
 
   onSelectCoordinates(event) {
@@ -40,3 +46,5 @@ class Leaflet extends Widget {
     }, 0)
   }
 }
+
+export { Leaflet };
